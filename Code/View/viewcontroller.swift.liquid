@@ -7,7 +7,7 @@
 
 import UIKit
 
-class {{ module_info.name }}ViewController: UIViewController {
+final class {{ module_info.name }}ViewController: UIViewController {
 
     var output: {{ module_info.name }}ViewOutput!
 
@@ -15,10 +15,8 @@ class {{ module_info.name }}ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }
 
 
 extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInput {
-
 }

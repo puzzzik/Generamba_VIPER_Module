@@ -7,7 +7,7 @@
 
 import UIKit
 
-class {{ module_info.name }}ModuleBuilder {
+final class {{ module_info.name }}ModuleBuilder {
     func build() -> UIViewController{
 
         let viewController = {{ module_info.name }}ViewController()
@@ -25,5 +25,4 @@ class {{ module_info.name }}ModuleBuilder {
 
         return viewController
     }
-
 }
