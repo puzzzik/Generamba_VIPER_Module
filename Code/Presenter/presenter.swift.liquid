@@ -1,5 +1,5 @@
 //
-//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.file_name }}
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
@@ -8,10 +8,22 @@
 // MARK: - {{ module_info.name }}Presenter
 
 final class {{ module_info.name }}Presenter {
+    // MARK: - Public Properties
 
     weak var view: {{ module_info.name }}ViewInput!
-    var interactor: {{ module_info.name }}InteractorInput!
-    var router: {{ module_info.name }}RouterInput!
+
+    // MARK: - Private Properties
+
+    private let interactor: {{ module_info.name }}InteractorInput
+    private let router: {{ module_info.name }}RouterInput
+
+
+    //MARK: - Lifecycle
+
+    init(interactor: {{ module_info.name }}InteractorInput, router: {{ module_info.name }}RouterInput) {
+        self.interactor = interactor
+        self.router = router
+    }
 }
 
 extension {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput {
